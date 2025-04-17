@@ -48,3 +48,12 @@ We can calculate g using
 ![comp13](https://github.com/user-attachments/assets/f7d5b762-8349-4160-a796-116c43a6b877)
 
 The minimum period T<sub>min</sub> , corresponds to the minimum value of l. Recall that l = h + h² and that k<sub>G</sub><sup>2</sup> = hh' is a constant, depending only on the physical characteristics of the pendulum.
+
+Thus, l=h+k<sub>G</sub><sup>2</sup>/h, and the minimum I occurs when, 
+
+![comp14](https://github.com/user-attachments/assets/5411f183-75da-46bf-bf73-c6951fa42c83)
+
+i.e, when h<sup>2</sup>=k<sub>G</sub><sup>2</sup>, h=h' and l=2h=2k<sub>G</sub>.
+
+
+Thus, at Tmin, l=2k<sub>G</sub>.
