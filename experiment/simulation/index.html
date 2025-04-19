@@ -1,169 +1,156 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
-
+<html lang="en" >
 <head>
-  
-  <!--It is a good practice to declare the encoding even for an 
-  English Web site. One function of this is to tag is to "reset"
-  the user's browser back to Latin-1 and ensure proper font 
-  settings. The Unicode "utf-8" encoding also ensures that any 
-  special characters inserted such as "Smart quotes", currency 
-  symbols, em-dashes and so forth will be properly displayed in
-  most browsers.-->
-  <meta http-equiv="Content-Type" content="text/html; 
-  charset=utf-8" >
+<title></title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-
-  <!-- The following meta element gives the appearance of using 
-  Internet Explorer (IE) but actually renders the page in google 
-  chrome thus rescuing the older IE versions and providing the 
-  speed and standards compliance, and security of Chrome 
-  http://tech18.com/google-chrome-frame-rescue-older-ie.html -->
-  <meta http-equiv="X-UA-Compatible" 
-  content="IE=edge,chrome=1"/>
-
-
-  <!-- The default title of the lab. -->
-  <title class="custom" id="page-title">Virtual Labs</title>
-  
-
-  <!-- Following meta tags store the information about the 
-  author and any other relevant information about the  code -->
-  <meta name="author" content="" class="custom">
-  <meta name="description" content="" class="custom">
-
-
-  <!-- Place the relative address of the favicon 
-  ("images/logo.jpeg" here). All major browsers support the link
-  rel="shortcut icon"  tag to associate a small icon with the 
-  page -->
-  <link rel="shortcut icon" href="../images/favicon.png" 
-  class="custom">
-
-
-  <!-- These are the stylesheets used for the lab. Please don't
-  edit them; If you do, you will lose the edits in subsequent 
-  releases of this User Interface. -->
-  <link rel="stylesheet" href="../css/default.css"/>
-  <link rel="stylesheet" href="../css/style.css"/>
-
-
-  <!-- Instead add your custom styles to override the defaults 
-  coming from the above style sheets. -->
-  
-  <link rel="stylesheet" href="../css/override.css"/>
-
-  <!-- ***************************************************** -->
-
-  <!-- All JavaScript at the bottom, except for Modernizr which
-  enables HTML5 elements & feature detects -->
-  <script type="text/javascript" src="../../lib/js/modernizr-1.5.min.js">
-  </script>
-
-  <script src="../../lib/js/jquery-1.7.1.min.js"></script>
-
-  <script type="text/javascript">
-    $(document).ready(function() 
-    {		
-      //the function is called once the document loads     
-
-      $('#hidden-content').load('default.html #experiment', 
-              function(response,status,xhr)
-      {
-        //loads the default.html #lab section into the
-        //#hidden-content
-		
-        $('#container').load('content.html #experiment', 
-              function(response,status,xhr)
-        {
-          //loads the content.html #lab section into the
-	  //#container
-
-          homePage=$("div#experiment-header-heading a").html();
-          
-	  thisPage=$("article#experiment-article header#experiment-article-heading").html();
-        
-	  breadcrumb="<font color='white'>" + "<a href='../index.html'>Home<a/> \> <a href='../index.html'>" + homePage + "</a> \> <a href='index.html'>" + thisPage + "</a>"+ "</font>";
-        
-	  $("article#experiment-article div#experiment-article-breadcrumb").html(breadcrumb);
-				
-	  $("#container .default").each(function() 
-	  {
-            // Extracts all elements with class = "default"
-            // and top down
-            
-	    sectionId = $(this).attr('id');
-            sectionContent = $("#hidden-content #" + 
-                  sectionId).html();
-            $("#container #" + sectionId).html(sectionContent);
-	  });
-			
-	  $("#container #experiment-article-sections > section").each(function() 
-	  {
-	    // loads all the content in the respective
-	    // sections with the corresponding section headings 
-
-            sectionId = $(this).attr('id');
-	    headerId = $("#" + sectionId + "-heading").html();
-	    iconId = $("#" + sectionId + "-icon").html();
-
-	    $("#container #experiment-article-navigation ul").
-	      append("<li> <a href=\'#\' id=\'"+ sectionId + 
-              "-menu\'>" + iconId +"<br />" +
-              headerId + "</a></li>");
-	  });
-	
-	  /*			
-          $("#experiment-article-sections").after(
-            "<div id='experiment-article-sections-view'> </div>");
-	  $("#experiment-article-sections-view").html($(
-            "#experiment-article-sections section:first").html()); */
-    
-	  $("#experiment-article-sections section").hide();
-	  //hide all the experiment sections
-
-	  $("#experiment-article-sections section:first").show();
-	  //show only the first experiment section when
-	  //the experiment page loads
-	  
-	  $("#experiment-article-navigation ul > li a").live('click',
-            function()            
-          {	
-            //enables the navigation
-
-            menuId = $(this).attr('id'); 
-            // this points to the current element
-	    
-	    sectionId = menuId.replace(/-menu/i, "");
-	    /*
-	    $("#experiment-article-sections-view").html($(
-            "#experiment-article-sections #" + 
-            sectionId).html());
-	    */
-            
-	    $("#experiment-article-sections section").hide();
-	    $("#experiment-article-sections #" + sectionId).show();
-        });
-      });		
-    });
-  });
-
-  </script>
-
+<meta name="description" content="">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+<meta name="theme-color" content="#0F69C3">
+<meta name="msapplication-TileColor" content="#0F69C3">	
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#0F69C3">
+<meta name="mobile-web-app-status-bar-style" content="#0F69C3">
+<meta name="msapplication-TileImage" content="../template/images/icons/logo_144.png">
+<link rel=icon sizes="512x512" href="../template/images/icons/logo_512.png">			
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="../template/images/icons/logo_512.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../template/images/icons/logo_72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../template/images/icons/logo_144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../template/images/icons/logo_144.png" />	
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">	
+<link rel="icon" type="image/png" href="../template/images/icons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="../template/images/icons/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="manifest.json">
+<link rel='stylesheet' href='../template/assets/css/fonts.googleapis.css'>
+<link rel="stylesheet" href="../template/bower_components/angular-material/angular-material.css" />
+<link rel="stylesheet" href="../template/assets/css/app.css" />
+<link rel="stylesheet" href="css/experiment.css" /> 
+<script src="../template/js/createjs-2015.05.21.min.js"></script>
+<script src="../template/js/canvasjs.min.js"></script>
+<script src="../template/bower_components/angular/angular.min.js"></script>
+<script src="../template/bower_components/angular-animate/angular-animate.js"></script>
+<script src="../template/bower_components/angular-aria/angular-aria.js"></script>
+<script src="../template/bower_components/angular-fullscreen/angular-fullscreen.js"></script>
+<script src="../template/js/Gettext.js"></script>
+<script type="text/javascript" src="../template/bower_components/angular-material/angular-material.js"></script>
+<script src="../template/js/getlanguage.js"></script>
+<script src="./src/user_controller.js"></script>
+<script src="./src/view.js"></script>
+<script src="./src/experiment.js"></script>
+<script src="../template/js/delaytimer.js"></script>
+<script src="../template/js/stopwatch.js"></script>
+<script type="text/javascript">
+angular
+.module('starterApp', ['ngMaterial','users'])
+.config(function($mdThemingProvider, $mdIconProvider){
+    $mdIconProvider
+        .icon("menu"       , "../template/assets/svg/menu.svg"        , 24)
+        .icon("fullscreen"       , "../template/assets/icons/Icon3.svg", 24)
+        .icon("help"      , "../template/assets/icons/Icon2.svg", 24);
+        $mdThemingProvider.theme('default')
+        .primaryPalette('blue')
+        .accentPalette('red');
+});
+</script>
 </head>
 
-<body> 
-  <div id="container"></div>
-  <div id="hidden-content"></div>
-	
-  <!-- Javascript at the bottom for fast page loading -->
-
-  <!--<script type="text/javascript" src="../js/MathJax/MathJax.js"> -->
-  <!--  </script> -->
-
-  <!-- ******** ADD/OVERRIDE JAVASCRIPT FILES HERE ********* -->
-
-  <!-- ***************************************************** -->
-  
+<body style="background-color: #f2f2f2;" ng-app="starterApp" ng-controller="UserController as ul">
+<md-toolbar class="md-toolbar-tools" id="main">
+	<md-button class="md-icon-button" hide-gt-md ng-click="ul.toggleList()" aria-label="Show User List">
+		<md-icon md-svg-icon="menu" ></md-icon>
+	</md-button>
+    <!-- //Experiment title gives here//   -->
+	<h1 flex="" layout="row" class="expTitle" id="expTitle">{{heading}}</h1>
+	<md-button class="md-icon-button" aria-label="help" ng-click="showActionToast()">
+		<md-icon md-svg-icon="help"></md-icon>
+	</md-button>
+	<md-button class="md-icon-button" aria-label="fullscreen" ng-click="goFullscreen()">
+		<md-icon md-svg-icon="fullscreen"></md-icon>
+	</md-button>
+</md-toolbar>
+<md-content flex layout="row" style="background-color: #f2f2f2;">
+	<md-content  id="content" layout-sm="column"  style="background-color: #f2f2f2; overflow:hidden" md-swipe-right="toggleSidenav()">        
+	<canvas id="demoCanvas" width="700" height="700" align="center" layout-fill experiment></canvas>
+	<div id="Copyright" layout="row" layout-align="center end">{{copyright}}</div>    
+		</md-content>
+		<md-sidenav class="site-sidenav md-sidenav-left" md-component-id="right" md-is-locked-open="$mdMedia('gt-md')" md-swipe-left="toggleSidenav()">
+    <div>  
+		<md-button id="variables" class="md-raised md-primary toolbarbutton subTitle" ng-click="toggle1()">{{variables}} <span aria-hidden="true">
+		<md-icon md-svg-src="md-toggle-arrow"  aria-hidden="true" ng-animate="{enter: 'rotate', leave: 'rotateCounterwise'}" ng-class="{true: 'rotate', false: 'rotateCounterwise'}[isActive1]" ></md-icon>
+		</span> </md-button>
+		<!-- ////////////   -->
+		<div ng-hide="showVariables" class="div">
+		
+			<!-- Insert slider1 label -->
+			<md-content class="md-title selectable" ng-model="lengthChange" layout-padding id="lengthChange">{{change_length}}: {{length}} {{length_unit}} </md-content>
+			<!-- Insert slider1 -->
+			<div layout>      
+				<md-slider id="slider" flex  ng-disabled="slider_disable" ng-model="length" step="5" min="5" max="95" aria-label="rating" ng-change="changeLength();"></md-slider>        
+			</div>
+			<!-- Insert dropdown box label -->
+            <md-content id="selectenvironment" class="md-title selectable" layout-padding>{{environment_types}}:</md-content>
+            <!-- Insert dropdown box -->
+            <md-content class="md-padding selectable">
+				<md-select placeholder="{{earth}}"  ng-model="types_environment" ng-disabled="dropdown_disable" ng-change="setEnvironmentType();" ng-init="types_environment='0'" aria-label="rating">
+                    <md-option ng-repeat="x in environmentArray" value="{{ x.type }}">
+                        {{ x.environment }} 
+                    </md-option>
+                </md-select>
+            </md-content>
+			
+			<!--  Start button   -->
+			<section layout="row" layout-align="center center">
+				<md-button class="md-raised" ng-disabled="startbtn_disable" id="reset" ng-click="stopFn();">
+					{{stop_label}}
+				</md-button>
+			</section>	
+			<!--  Reset button   -->
+			<section layout="row" layout-align="center center">
+				<md-button class="md-raised" id="reset" ng-click="resetFn();">
+					{{reset_label}}
+				</md-button>
+			</section>
+			<!-- Insert checkbox2 -->
+			<md-checkbox ng-disabled="result_disable" class="md-title" ng-model="resultValue" aria-label="Checkbox 1" id="showResult" ng-change="showResult();">{{show_result}}</md-checkbox>      
+		</div>
+		<!-- ////////////   -->
+        <md-button id="result" class="md-raised md-primary toolbarbutton subTitle" ng-click="toggle()">{{result}} <span aria-hidden="true">
+        <md-icon md-svg-src="md-toggle-arrow"   aria-hidden="true" ng-animate="{enter: 'rotate', leave: 'rotateCounterwise'}" ng-class="{true: 'rotate', false: 'rotateCounterwise'}[isActive]" ></md-icon>
+        </span> </md-button>
+        
+         <!-- //inset result label ng-show="hide_show_result"ng-show="hide_show_result"//   -->
+        <div ng-hide="hide_show_result" class="div">     
+			<md-content class="md-title selectable" layout-padding id="distanceLbl">{{result_label1}} : 
+				{{gravity}} {{gravity_unit}}
+			</md-content>
+            <md-content class="md-title selectable" layout-padding id="distanceLbl">{{result_label2}} : 
+				{{gyration}} {{gyration_unit}}
+			</md-content>
+			<md-content class="md-title selectable" layout-padding id="distanceLbl">{{result_label3}} : 
+				{{inertia}}  {{inertia_unit}}
+			</md-content>		
+		</div>
+    </div>
+</md-sidenav>
+</md-content>
 </body>
+<script src="../template/js/loading.js"></script>
+<script  async="async">
+
+if(navigator.serviceWorker) {
+  navigator
+    .serviceWorker
+    .register('service_worker_Compound_Pendulum.js')
+    .then(function(r) {
+      console.log('NW  App now available offline');
+    })
+    .catch(function(e) {
+      console.log('NW App NOT available offline');
+      console.log(e);
+    });
+} else {
+  console.log('Service workers are not supported');
+}     
+</script>
 </html>
