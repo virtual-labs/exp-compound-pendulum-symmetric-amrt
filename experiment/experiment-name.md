@@ -1,1 +1,1 @@
-## Experiment name
+## Compound Pendulum- Symmetric
