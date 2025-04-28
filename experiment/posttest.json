@@ -2,37 +2,39 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "The moment of momentum is called",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "torque",
+        "b": "moment of inertia",
+        "c": "angular momentum",
+        "d": "linear momentum"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "a",
+      
+      "correctAnswer": "c",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "What is the rotational analog corresponds to mass in linear motion?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "c",
+        "a": "Inertial mass",
+        "b": "Moment of inertia",
+        "c": "Radius of gyration",
+        "d": "Torque"
+      },    
+      
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Moment of inertia of a rectangular strip of length l and breadth b is given by",
+      "answers": {
+        "a": "(M/12)(l<sup>2</sup>+b<sup>2</sup>)<sup>2</sup>",
+        "b": "(M/2)(l<sup>2</sup>+b<sup>2</sup>)<sup>2</sup>",
+        "c": "(M/2)(l<sup>2</sup>+b<sup>2</sup>)",
+        "d": "(M/12)(l<sup>2</sup>+b<sup>2</sup>)"
+      },     
+     
+      "correctAnswer": "d",
       "difficulty": "beginner"
     }
   ]
