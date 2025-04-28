@@ -1,0 +1,29 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "The time taken by a pendulum to complete one oscillation is called its",
+      "answers": {
+        "a": "Time period",
+        "b": "Amplitude",
+        "c": "Frequency",
+        "d": "Velocity"
+      },
+     
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "The maximum displacement of the compound pendulum from its mean position is called",
+      "answers": {
+        "a": "Time period",
+        "b": "Amplitude",
+        "c": "Frequency",
+        "d": "Velocity"
+      },
+     
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    }
+  ]
+}
