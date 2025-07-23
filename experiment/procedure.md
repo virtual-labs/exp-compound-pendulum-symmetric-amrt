@@ -51,10 +51,10 @@ Acceleration of gravity, g= 4π<sup>2</sup>(2kG/Tmin2) = ......................
 
 
 ## Result
-Average acceleration of gravity, g= 4π<sup>2</sup>(l/T2) = ..................  m/s2   
+Average acceleration of gravity, g= 4π<sup>2</sup>(l/T2) = ..................  m/s<sup>2</sup>   
 
-Average radius of gyration of the pendulum about its centre of mass, kG =  ..................  m
+Average radius of gyration of the pendulum about its centre of mass, k<sub>G</sub> =  ..................  m
 
 Mass of the pendulum M =  ..................  Kg
 
-Moment of inertia of the pendulum about its centre of mass, IG=MkG2 =  ..................  Kgm2       
+Moment of inertia of the pendulum about its centre of mass, I<sub>G</sub>=Mk<sub>G</sub><sup>2</sup> =  ..................  Kgm<sup>2</sup>       
